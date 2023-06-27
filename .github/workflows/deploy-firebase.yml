@@ -16,6 +16,6 @@ jobs:
       - run: npm run generate
       - uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting
+          args: deploy --only hosting --project wanyu-app
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
