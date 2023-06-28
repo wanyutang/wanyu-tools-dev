@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@vite-pwa/nuxt'],
+  modules: ['@nuxtjs/pwa'],
   ssr: false,
   typescript: {
     shim: false
@@ -11,14 +11,6 @@ export default defineNuxtConfig({
   vite: {
     define: {
       "process.env.DEBUG": false,
-      pwa: {
-        manifest: {
-          name: 'My App',
-          short_name: 'App',
-          start_url: '/',
-          display: 'standalone',
-        }
-      },
     },
   },
   nitro: {
