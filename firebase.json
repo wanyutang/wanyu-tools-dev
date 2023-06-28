@@ -1,5 +1,6 @@
 {
     "hosting": {
+      "target": "wanyutools",
       "public": ".output/public",
       "ignore": [
         "firebase.json",
