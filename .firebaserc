@@ -1,7 +1,15 @@
 {
   "projects": {
-    "staging": "wanyutools"
+    "default": "wanyu-app-d6db4"
   },
-  "targets": {},
+  "targets": {
+    "wanyu-app-d6db4": {
+      "hosting": {
+        "wanyutools": [
+          "wanyutools"
+        ]
+      }
+    }
+  },
   "etags": {}
 }
