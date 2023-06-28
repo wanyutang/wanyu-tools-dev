@@ -3,12 +3,10 @@
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
-    <!-- PWA component -->
-    <VitePwaManifest />
   </div>
 </template>
 <script>
-import { VitePwaManifest } from '@vite-pwa/nuxt'
+import { VitePwaManifest } from '@vite-pwa/nuxt/dist/components'
 
 export default {
   components: {
