@@ -14,8 +14,7 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm run generate
-      - run: sleep 60
-      - run: ls dist
+      - run: ls .output/public
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting --project wanyu-app-d6db4
