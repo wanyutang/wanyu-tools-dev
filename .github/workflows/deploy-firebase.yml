@@ -9,15 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 14
       - run: npm ci
       - run: npm run generate
       - run: sleep 60
       - run: ls dist
       - uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:.output/public --project wanyu-app-d6db4
+          args: deploy --only hosting --project wanyu-app-d6db4
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
