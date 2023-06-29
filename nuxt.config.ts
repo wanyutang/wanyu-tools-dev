@@ -2,9 +2,13 @@ import { defineNuxtConfig } from 'nuxt/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@vite-pwa/nuxt'
-  ],
+  app: {
+    head: {
+      link: [
+        { rel: 'manifest', href: '/manifest.json' }
+      ]
+    }
+  },
   ssr: false,
   typescript: {
     shim: false
@@ -15,9 +19,6 @@ export default defineNuxtConfig({
   vite: {
     define: {
       "process.env.DEBUG": false,
-      pwa: {
-        /* PWA options */
-      },
     },
   },
   nitro: {
